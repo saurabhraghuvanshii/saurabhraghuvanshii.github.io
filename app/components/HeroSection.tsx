@@ -166,7 +166,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.4 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-[0.9] mb-6"
           >
-            <span className="italic font-light text-gradient-orange">SAURABH</span>
+            <span className="italic font-light text-gradient-orange">SAURABH<span className="text-orange">.</span></span>
             <br />
             <span className="font-black text-white">RAGHUVANSHI</span>
           </motion.h1>

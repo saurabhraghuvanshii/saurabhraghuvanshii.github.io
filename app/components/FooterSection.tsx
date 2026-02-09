@@ -96,8 +96,7 @@ export default function FooterSection() {
           className="text-center mb-20 flex flex-col items-center"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6">
-            LET&apos;S BUILD
-
+            LET&apos;S BUILD{" "}
             <span className="text-gradient-orange">SOMETHING GREAT</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-lg mb-10 text-center">
