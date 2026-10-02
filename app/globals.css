@@ -135,6 +135,8 @@ details[open] summary { margin-bottom: 8px; }
 .gh-legend { display: flex; align-items: center; gap: 4px; margin-top: 10px; }
 .gh-legend span { margin-inline: 4px; }
 .gh-legend a { margin-left: auto; }
+.oss-more { margin: 24px 0 0; color: var(--mute); }
+.oss-more a { color: var(--fg); }
 
 /* stack */
 .kv { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 0; border-top: 1px solid var(--line); }

@@ -8,6 +8,7 @@ import ProjectGrid from "./components/ProjectGrid";
 import Section from "./components/Section";
 import StackTable from "./components/StackTable";
 import Stats from "./components/Stats";
+import { ossGist } from "@/data/stack";
 import { work } from "@/data/work";
 
 export default function Home() {
@@ -29,6 +30,12 @@ export default function Home() {
       <Section id="oss" label="Open source">
         <Stats />
         <ContributionGraph />
+        <p className="oss-more">
+          Every contribution, project by project, in one place.{" "}
+          <a href={ossGist} target="_blank" rel="noopener">
+            Full write-up of my open source work ↗
+          </a>
+        </p>
       </Section>
 
       <Section id="stack" label="Stack">
