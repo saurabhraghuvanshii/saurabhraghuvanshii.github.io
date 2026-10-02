@@ -1,37 +1,43 @@
-"use client";
-
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import MicroTextureSection from "./components/MicroTextureSection";
-import ExperienceSection from "./components/ExperienceSection";
-import ProjectsSection from "./components/ProjectsSection";
-import GitHubGraph from "./components/GitHubGraph";
-// import ChampionSection from "./components/ChampionSection";
-import FooterSection from "./components/FooterSection";
-import FloatingBackground from "./components/FloatingBackground";
-import ScrollProgressIndicator from "./components/ScrollProgressIndicator";
+import Contact from "./components/Contact";
+import ContributionGraph from "./components/ContributionGraph";
+import FeaturedProject from "./components/FeaturedProject";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Job from "./components/Job";
+import ProjectGrid from "./components/ProjectGrid";
+import Section from "./components/Section";
+import StackTable from "./components/StackTable";
+import Stats from "./components/Stats";
+import { work } from "@/data/work";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full bg-black text-white noise-overlay grid-bg">
-      <div className="orange-frame" />
+    <main className="wrap" id="top">
+      <Hero />
 
-      <FloatingBackground />
+      <Section id="work" label="Work">
+        {work.map((job) => (
+          <Job key={job.title} job={job} />
+        ))}
+      </Section>
 
-      <ScrollProgressIndicator />
-      <Navbar />
+      <Section id="projects" label="Projects">
+        <FeaturedProject />
+        <ProjectGrid />
+      </Section>
 
-      <main className="relative z-10 w-full">
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <MicroTextureSection />
-        <GitHubGraph />
-        {/* <ChampionSection /> */}
-        <FooterSection />
-      </main>
-    </div>
+      <Section id="oss" label="Open source">
+        <Stats />
+        <ContributionGraph />
+      </Section>
+
+      <Section id="stack" label="Stack">
+        <StackTable />
+      </Section>
+
+      <Section id="contact" label="Contact" after={<Footer />}>
+        <Contact />
+      </Section>
+    </main>
   );
 }
